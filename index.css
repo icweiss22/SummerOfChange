@@ -1,0 +1,709 @@
+﻿/* Global Styles
+------------------------------------*/
+body {
+    position: relative;
+}
+
+:root {
+    --blue-color: #278ed7;
+    --icon-size: 175px;
+    --dark-blue-color: #1e3888;
+    --light-blue-color: #bbe2fc;
+    --navbar-blue-color: #2755d7;
+    /* These three used to be the secondary design for the website, now these are blue but names are still 'green'*/
+    --light-green-color: #f3faff;
+    --green-color: #adcee6;
+    --dark-green-color: #004778;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Muli', sans-serif;
+}
+
+.bordered-card {
+    box-shadow: 1px 1px 0px 3px var(--blue-color) !important;
+    border-color: #9ed6fb !important;
+    background-color: #ffffffe3;
+    border-style: solid !important;
+    border-width: 4px !important;
+    border-left: 0px none !important;
+    border-top: 0px none !important;
+}
+
+main {
+    background: url(images/blue-background-image.png) repeat top right scroll;
+    background-size: 136%;
+}
+
+#about {
+    min-height: 90vh;
+    margin-top: 0;
+}
+
+.accordion-body {
+    border-radius: 0 !important;
+}
+
+section.full {
+    padding-top: 7rem;
+}
+
+footer {
+    margin-top: 7rem;
+}
+
+.fixed-top {
+    position: sticky !important;
+}
+
+img {
+    width: 300px;
+    vertical-align: middle;
+    border-style: none;
+}
+
+.cards-header-custom {
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto Slab', serif;
+    vertical-align: middle;
+}
+
+    .cards-header-custom h2 {
+        font-size: 3rem;
+        border-bottom: 3px solid var(--blue-color);
+        margin-bottom: 3rem;
+    }
+
+.subheader-custom {
+    font-size: 2.5rem !important;
+    color: var(--blue-color);
+    margin-bottom: 0rem;
+}
+
+.cards-body-custom {
+    display: flex;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 3rem;
+    padding-top: 1rem;
+}
+
+    .cards-body-custom p {
+        font-size: larger;
+    }
+
+hr {
+    color: var(--blue-color);
+    height: 2px !important;
+}
+
+.blue {
+    color: var(--dark-blue-color);
+}
+
+.quicksand {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+}
+
+.fa-calendar-alt {
+    margin-right: 0.4rem;
+}
+
+.fa-map-marked {
+    margin-right: 0.4rem;
+}
+
+.dark-green {
+    color: var(--dark-green-color);
+}
+
+.ml-3 {
+    margin-left: 1rem !important;
+}
+
+.badge-custom {
+    font-family: 'Muli', sans-serif;
+    font-size: 1.1rem !important;
+}
+
+.z-0 {
+    z-index: 0;
+}
+
+.z-1 {
+    z-index: -1;
+}
+
+.z-2 {
+    z-index: -2;
+}
+
+/* Profile
+------------------------------------*/
+#about {
+    margin-top: 0;
+}
+
+    #about .cards-header-custom h1 {
+        border-bottom: none;
+        margin-bottom: 0rem;
+        font-size: 5rem;
+    }
+
+    #about #custom-secondary h3 {
+        color: var(--navbar-blue-color);
+    }
+
+#work {
+    --fa-animation-duration: 1.4s;
+    --fa-animation-delay: 5s;
+    --fa-animation-iteration-count: 10;
+}
+
+#about-cws {
+    text-decoration: none;
+    color: var(--navbar-blue-color);
+}
+
+    #about-cws:hover {
+        color: var(--blue-color);
+    }
+
+#about-body {
+    font-family: 'Muli', sans-serif;
+    font-size: large;
+    font-weight: bold;
+}
+
+.tooltip {
+    font-size: medium;
+}
+
+.socials {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: end;
+}
+
+    .socials a {
+        text-decoration: none;
+    }
+
+#linkedin-social {
+    width: 3rem;
+    transition: filter .2s;
+    vertical-align: -2.3rem;
+    /*filter: hue-rotate(35deg) brightness(0.75);*/
+}
+
+    #linkedin-social:hover {
+        filter: opacity(0.65);
+    }
+
+#github-social {
+    width: 4rem;
+    transition: filter .2s;
+    vertical-align: text-top;
+}
+
+    #github-social:hover {
+        filter: opacity(0.75);
+    }
+
+.mr-2 {
+    margin-right: 0.5rem;
+}
+
+.ml-4 {
+    margin-left: 1.5rem;
+}
+
+/* Work Experience
+------------------------------------*/
+#work-experience {
+    font-family: 'Lato', sans-serif;
+    font-size: large;
+}
+
+    #work-experience .card {
+        box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 8%);
+    }
+
+    #work-experience a {
+        color: var(--blue-color);
+    }
+
+        #work-experience a:hover {
+            color: black;
+        }
+
+    #work-experience .card-container .card {
+        border-top-style: none;
+    }
+
+.work-custom-body {
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    padding: 1rem 1rem;
+    padding-bottom: 0;
+    border: 1px solid var(--dark-blue-color);
+    border-radius: 0.5rem !important;
+    border-left-width: thick;
+    border-right-width: medium;
+    background-color: var(--light-blue-color);
+    transition: all .2s ease-in-out;
+}
+
+    .work-custom-body:hover {
+        transform: scale(1.03);
+    }
+
+.skills-container-full .card {
+    transition: all .2s ease-in-out;
+}
+
+    .skills-container-full .card:hover {
+        transform: scale(1.1);
+    }
+
+.sub-work-experience {
+    font-weight: lighter;
+    font-size: smaller;
+    margin-left: 0.4rem !important;
+}
+
+#work-experience section {
+    background-color: var(--light-blue-color);
+    font-size: large;
+}
+
+.list-group-item {
+    background-color: #00000000 !important;
+}
+
+.fa-caret-right {
+    margin-right: 0.7rem;
+    color: var(--dark-blue-color);
+    vertical-align: middle;
+    font-size: 1.6rem;
+}
+
+#work-experience .badge-custom, #education-flex .badge-custom {
+    display: grid;
+    align-items: center;
+    background: #195B98;
+    color: white;
+    padding: 0.4rem 0.7rem;
+    font-size: 90%;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: 10rem;
+    vertical-align: baseline;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s;
+    font-weight: 700;
+}
+
+.work-custom-body-other {
+    background-color: var(--light-green-color);
+    border-color: var(--dark-green-color);
+}
+
+    .work-custom-body-other .badge-custom {
+        background-color: #195B98 !important;
+        color: white !important;
+    }
+
+    .work-custom-body-other .fa-caret-right {
+        color: var(--dark-green-color);
+    }
+
+/* Technologies
+------------------------------------*/
+.card-container.languages {
+    display: grid;
+    grid-row-gap: 1rem;
+    grid-column-gap: 15px;
+    grid-template-columns: repeat( auto-fit, var(--icon-size) );
+    justify-content: center;
+}
+
+    .card-container.languages .card {
+        border-color: var(--blue-color);
+    }
+
+.card-container .card {
+    border: none;
+    border-top-style: solid;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
+}
+
+#skills .card {
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 8%);
+}
+
+.bold-skills-headers {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--dark-blue-color);
+}
+
+#skills .work-custom-body {
+    border-radius: 0 !important;
+    border-top: 0;
+}
+
+    #skills .work-custom-body:hover {
+        transform: none;
+    }
+
+.accordion-button {
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+.accordion-body h3 {
+    font-family: 'Muli', sans-serif;
+    font-weight: bold;
+}
+
+#technologies-accordion .accordion-item .accordion-body .card {
+    cursor: pointer;
+}
+
+.accordion-button-blue:not(.collapsed) {
+    background-color: #bbe2fc;
+    border: 2px solid var(--dark-blue-color);
+    border-bottom: 0;
+    border-left-width: thick;
+    border-right-width: medium;
+    color: var(--dark-blue-color);
+}
+
+.accordion-button-green:not(.collapsed) {
+    background-color: var(--light-green-color);
+    border: 2px solid var(--dark-green-color);
+    border-bottom: 0;
+    border-left-width: thick;
+    border-right-width: medium;
+    color: var(--dark-green-color);
+}
+
+.accordion-button-green {
+    background-color: var(--light-green-color);
+}
+
+    .accordion-button-green:focus {
+        box-shadow: 0 0 0 0.1rem rgb(1 68 1 / 25%) !important;
+    }
+
+.accordion-button-blue {
+    background-color: var(--light-blue-color);
+}
+
+    .accordion-button-blue:focus {
+        box-shadow: 0 0 0 0.1rem rgb(30 56 136 / 25%) !important;
+    }
+
+    .accordion-button-blue.collapsed {
+        border: 1px solid var(--dark-blue-color);
+        border-top: 0;
+        border-bottom: 0;
+    }
+
+.accordion-button-green.collapsed {
+    border: 1px solid var(--dark-green-color);
+    border-top: 0;
+    border-bottom: 0;
+}
+
+#first-accordion-button {
+    border-top: 1px solid var(--dark-blue-color);
+}
+
+#last-accordion-button.collapsed {
+    border-bottom: 1px solid var(--dark-green-color);
+}
+
+#skills-programming-body .card, #skills-collaboration-body .card {
+    border-color: var(--dark-green-color);
+    border-width: thick;
+}
+
+#skills-development-body .card, #skills-tools-body .card {
+    border-color: var(--dark-blue-color);
+    border-width: thick;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("images/chevron-down.svg");
+}
+
+/* Projects
+------------------------------------*/
+#pharmacy-link, #ht-link {
+    font-size: 1.3rem;
+    vertical-align: top;
+}
+
+#projects-flex {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+    #projects-flex .card {
+        height: auto;
+        width: fit-content;
+        background-color: #0000;
+        border: none;
+    }
+
+    #projects-flex .work-custom-body {
+        height: 100%;
+    }
+
+a.dark-green:hover {
+    color: var(--green-color);
+    text-decoration: none;
+}
+
+#pharmacy-link, #ht-link {
+    text-decoration: none;
+}
+
+.project-header {
+    font-size: 1.7rem;
+}
+
+.project-body {
+    font-size: large;
+}
+
+/* Education
+------------------------------------*/
+#education-flex {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+    #education-flex .badge-custom i {
+        margin-right: 0.4rem;
+    }
+
+    #education-flex .card {
+        height: auto;
+        width: -webkit-fill-available;
+        background-color: #0000;
+        border: none;
+    }
+
+    #education-flex .work-custom-body {
+        height: 100%;
+    }
+
+#fa-school-custom {
+    position: absolute;
+    font-size: 13.2rem;
+    color: #278ed74a;
+    right: 0;
+    bottom: 0;
+}
+
+#fa-graduation-cap-custom {
+    position: absolute;
+    font-size: 13.2rem;
+    color: #278ed74a;
+    right: 0.2rem;
+    top: 3.5rem;
+}
+
+#education .badge-custom {
+    width: fit-content;
+}
+
+#education-flex #auburn-university .badge-custom {
+    background-color: var(--light-green-color);
+    color: var(--dark-green-color);
+    border: 1.5px solid var(--dark-blue-color)
+}
+
+#education-flex #auburn-high-school .badge-custom {
+    border: 1.5px solid var(--dark-green-color) !important;
+}
+
+/* Contact Info
+------------------------------------*/
+footer {
+    color: white;
+    background-color: var(--navbar-blue-color);
+    padding: 1rem;
+    text-align: center;
+    font-size: medium;
+}
+
+    footer div a:hover {
+        color: white;
+        text-decoration: none;
+    }
+
+/* Navbar
+------------------------------------*/
+.navbar {
+    background-color: var(--navbar-blue-color) !important;
+}
+
+    .navbar a {
+        color: white !important;
+        font-weight: 700;
+    }
+
+        .navbar a:hover {
+            color: #a6dafc !important;
+        }
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 1rem !important;
+    padding-left: 1rem;
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: #a6dafc;
+    position: relative;
+    width: 0%;
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav li {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+}
+
+a.nav-link {
+    border-radius: 0.5rem;
+}
+
+    a.nav-link.active {
+        background-color: var(--dark-blue-color);
+    }
+
+/* Responsive
+------------------------------------*/
+@media (max-width: 1200px) {
+    main {
+        background: linear-gradient(to top, #2755d7 0%, #bbe2fc 100%);
+    }
+
+    #fa-graduation-cap-custom {
+        top: 11rem;
+    }
+
+    .container {
+        max-width: 1200px;
+    }
+
+    #projects-flex {
+        flex-direction: column;
+    }
+
+        #projects-flex section.card:last-child {
+            margin-left: 0;
+            margin-top: 1.5rem;
+        }
+
+    .accordion-header button {
+        font-size: xx-large;
+    }
+
+    .project-header {
+        font-size: 3rem;
+    }
+
+    .project-body {
+        font-size: xx-large;
+    }
+
+    #auburn-university h2, #auburn-high-school h2 {
+        font-size: 3rem;
+    }
+
+    #education-flex .work-custom-body span.badge-custom {
+        font-size: 1.5rem !important;
+    }
+
+    #first-scholarship {
+        margin-bottom: 0.5rem;
+    }
+
+    #work-experience .work-custom-body {
+        font-size: xx-large;
+    }
+
+        #work-experience .work-custom-body h2.fw-bold {
+            font-size: 3rem;
+        }
+
+    .cards-header-custom h2 {
+        font-size: 3.5rem !important;
+    }
+
+    #work-experience .work-custom-body span.badge-custom {
+        font-size: 1.8rem !important;
+    }
+
+    #about #about-body {
+        font-size: xx-large;
+        font-weight: normal;
+    }
+
+    #about .cards-header-custom h1 {
+        font-size: 5.8rem;
+    }
+
+    .subheader-custom {
+        font-size: 3rem;
+    }
+
+    #about {
+        padding-top: 0rem;
+        margin-top: -12rem;
+    }
+
+    nav {
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+    }
+
+        nav button.navbar-toggler span {
+            width: 4em;
+            height: 4em;
+        }
+
+    .nav-item {
+        font-size: 2rem;
+        width: 30%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+
+    footer {
+        font-size: xx-large;
+        border-top: 1.5px solid var(--light-blue-color);
+    }
+}
